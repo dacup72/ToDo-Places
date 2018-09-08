@@ -1,0 +1,34 @@
+{
+  "name": "todo-places",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm run start --prefix client",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "devinstall": "npm install && cd ./client && npm install",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dacup72/ToDo-Places.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dacup72/ToDo-Places/issues"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "concurrently": "^4.0.1",
+    "express": "^4.15.4",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.0.17"
+  },
+  "homepage": "https://github.com/dacup72/ToDo-Places#readme"
+}
