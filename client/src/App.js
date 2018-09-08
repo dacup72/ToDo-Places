@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import GoogleMapReact from 'google-map-react';
 import keys from './config/keys';
+import TestMarker from "./TestMarker";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -9,10 +10,10 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 class App extends Component {
   static defaultProps = {
     center: {
-      lat: 59.95,
-      lng: 30.33
+      lat: 39.742043,
+      lng: -104.991531
     },
-    zoom: 11
+    zoom: 9
   };
 
   render() {
@@ -23,10 +24,10 @@ class App extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text={'Kreyser Avrora'}
+          <TestMarker
+            lat={39.742043}
+            lng={-104.991531}
+            text={'Denver'}
           />
         </GoogleMapReact>
       </div>
